@@ -57,7 +57,7 @@ export const projectsData = [
   {
     title: "Spliced",
     description:
-      "I worked on this full stack chat application as a side project and to explore MongoDB and Prisma.",
+      "I worked on this full stack chat application as a side project to explore MongoDB and Prisma.",
     tags: ["React", "Typescript", "Next.js", "Tailwind", "Prisma", "Pusher", "MongoDB"],
     imageUrl: splicedImg,
     url: "https://spliced-chat.vercel.app/"
