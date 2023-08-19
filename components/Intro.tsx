@@ -4,11 +4,12 @@ import React from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { BsArrowRight, BsGithub, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { BsArrowRight } from 'react-icons/bs'
 import { HiDownload } from 'react-icons/hi'
 
 import Profile from "@/public/profile.png"
 import Logo from "@/public/SmallLogo.png"
+import { linksData } from '@/lib/data'
 
 export default function Intro() {
   return (
@@ -50,7 +51,7 @@ export default function Intro() {
                 </motion.div>
             </div>
         </div>
-        <motion.p
+        <motion.h1
             className="mb-10 mt-4 px-4 text-2xl sm:text-4xl font-medium !leading-[1.5]"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0}}
@@ -61,7 +62,7 @@ export default function Intro() {
                 and a <span className="font-bold">full-stack developer</span>. I enjoy
                 building sites & apps and I&apos;m looking for internships. My focus is{" "}
                 <span className="underline">React (Next.js) and Python</span>.
-        </motion.p>
+        </motion.h1>
         <motion.div 
             className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
             initial={{ opacity: 0, scale: 0 }}
@@ -84,34 +85,16 @@ export default function Intro() {
                         Download my CV <HiDownload className="opacity-60 group-hover:rotate-90 transition"/>
                 </a>
                 <div className="flex gap-2">
-                    <a 
-                        className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
-                        href="https://www.instagram.com/matteodiiorioo/"
-                        target="_blank"
-                    >
-                            <BsInstagram />
-                    </a>
-                    <a
-                        className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
-                        href="http://twitter.com/splc3d"
-                        target="_blank"
-                    >
-                            <BsTwitter />
-                    </a>
-                    <a
-                        className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
-                        href="http://linkedin.com/in/matteo-di-iorio"
-                        target="_blank"
-                    >
-                            <BsLinkedin />
-                    </a>
-                    <a
-                        className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
-                        href="https://github.com/splicer3"
-                        target="_blank"
-                    >
-                            <BsGithub />
-                    </a>
+                    {linksData.map((social) => 
+                        <a
+                            key={social.site}
+                            href={social.href}
+                            className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
+                            target="_blank"
+                        >
+                            {social.icon}
+                        </a>
+                    )}
                 </div>
         </motion.div>
     </section>

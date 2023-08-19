@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import splicedImg from "@/public/spliced.png";
 import splicifyImg from "@/public/splicify.png";
 import objdetectorImg from "@/public/objdetector.png";
+import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const links = [
   {
@@ -96,4 +97,27 @@ export const skillsData = [
   "Java",
   "Stripe",
   "Supabase"
+] as const;
+
+export const linksData = [
+  {
+    site: "instagram",
+    icon: React.createElement(BsInstagram),
+    href: "https://www.instagram.com/matteodiiorioo/"
+  },
+  {
+    site: "twitter",
+    icon: React.createElement(BsTwitter),
+    href: "http://twitter.com/splc3d"
+  },
+  {
+    site: "linkedin",
+    icon: React.createElement(BsLinkedin),
+    href: "http://linkedin.com/in/matteo-di-iorio"
+  },
+  {
+    site: "github",
+    icon: React.createElement(BsGithub),
+    href: "https://github.com/splicer3"
+  },
 ] as const;
