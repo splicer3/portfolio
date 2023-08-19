@@ -3,12 +3,13 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import SectionHeading from './SectionHeading'
+import SectionHeading from '../SectionHeading'
 
 export default function About() {
   return (
     <motion.section
-        className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40"
+        id="about"
+        className="mb-24 max-w-[45rem] text-center leading-8 sm:mb-0 scroll-mt-28"
         initial={{ y:100, opacity: 0}}
         animate={{ y:0, opacity: 1 }}
         transition={{ delay: 0.175 }}

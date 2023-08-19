@@ -57,9 +57,10 @@ export const projectsData = [
   {
     title: "Spliced",
     description:
-      "I worked on this full stack chat application as a side project and to explore MongoDB and Prisma. Some interesting features are seen receipts and online status.",
+      "I worked on this full stack chat application as a side project and to explore MongoDB and Prisma.",
     tags: ["React", "Typescript", "Next.js", "Tailwind", "Prisma", "Pusher", "MongoDB"],
     imageUrl: splicedImg,
+    url: "https://spliced-chat.vercel.app/"
   },
   {
     title: "Splicify",
@@ -67,6 +68,7 @@ export const projectsData = [
       "I created this Spotify clone that allows any user to upload songs. Subscriptions are implemented via Stripe.",
     tags: ["React", "TypeScript", "Next.js", "Tailwind", "Stripe", "Supabase"],
     imageUrl: splicifyImg,
+    url: "https://splicify.vercel.app/"
   },
   {
     title: "Object Detector",
@@ -74,6 +76,7 @@ export const projectsData = [
       "A self-hosted web app that runs on Flask to allow for easy object detection using YOLOv8. It features both a webcam mode and an upload mode.",
     tags: ["HTML", "CSS", "JavaScript", "Python", "Flask", "OpenCV"],
     imageUrl: objdetectorImg,
+    url: "https://github.com/splicer3/SPLCD-ObjectDetector"
   },
 ] as const;
 
