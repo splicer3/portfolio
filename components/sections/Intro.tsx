@@ -13,13 +13,15 @@ import { linksData } from '@/lib/data'
 import { useSectionInView } from '@/hooks/useSectionInView'
 import { logoVariants } from '@/lib/variants'
 import { MotionImage } from '@/lib/custom-motions'
+import { useActiveSectionContext } from '@/context/ActiveSectionContext'
 
 export default function Intro() {
-    const { ref: sectionRef } = useSectionInView("Home", 0.5);
-    const containerRef = useRef<HTMLDivElement>(null)
+    const { ref } = useSectionInView("Home", 0.5);
+    const containerRef = useRef<HTMLDivElement>(null);
+    const { setActiveSection, setLastClick } = useActiveSectionContext();
     
     return (
-    <section ref={sectionRef} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
+    <section ref={ref} id="home" className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
         <div ref={containerRef}>
             <div className="flex items-center justify-center">
                 <div className="relative">
@@ -76,13 +78,17 @@ export default function Intro() {
                 }}
             >
                     <Link
+                        onClick={() => {
+                            setActiveSection("Contact");
+                            setLastClick(Date.now());
+                        }}
                         href="#contact"
                         className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline:none hover:scale-110 hover:bg-gray-950 active:scale-105 hover:shadow-xl transition"
                     >
                             Contact me <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
                     </Link>
                     <a
-                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline:none border border-black/10 hover:scale-110 hover:bg-gray-50 active:scale-105 hover:shadow-xl cursor-pointer transition"
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline:none borderBlack hover:scale-110 hover:bg-gray-50 active:scale-105 hover:shadow-xl cursor-pointer transition"
                         href='/CV.pdf'
                         download
                     >
@@ -93,7 +99,7 @@ export default function Intro() {
                             <a
                                 key={social.site}
                                 href={social.href}
-                                className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full border border-black/10 hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
+                                className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full borderBlack hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
                                 target="_blank"
                             >
                                 {social.icon}

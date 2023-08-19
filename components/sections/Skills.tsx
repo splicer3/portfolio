@@ -12,14 +12,14 @@ export default function Skills() {
     const { ref } = useSectionInView("Skills");
 
     return (
-        <section ref={ref} id="skills" className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40">
+        <section ref={ref} id="skills" className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-0">
             <SectionHeading>My skills</SectionHeading>
             <ul ref={constraintsRef} className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
                 {
                     skillsData.map((skill, i) => (
                         <motion.li 
                             key={i}
-                            className="bg-white border border-black/[0.1] rounded-full px-5 py-3"
+                            className="bg-white borderBlack rounded-full px-5 py-3"
                             variants={pillVariants}
                             initial="initial"
                             whileInView="animate"
