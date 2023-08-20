@@ -5,7 +5,9 @@ import SectionHeading from '../SectionHeading'
 import { FaPaperPlane } from 'react-icons/fa'
 import { useSectionInView } from '@/hooks/useSectionInView';
 import { motion } from 'framer-motion';
-import sendEmail from '@/actions/sendEmail';
+import { sendEmail } from '@/actions/sendEmail';
+import { toast } from 'react-hot-toast';
+import SubmitButton from '../SubmitButton';
 
 export default function Contact() {
     const { ref } = useSectionInView("Contact");
@@ -27,8 +29,20 @@ export default function Contact() {
                     or through this form.
                 </p>
                 <form
-                    action={sendEmail} 
-                    className="mt-10 flex flex-col">
+                    action={async (formData) => {
+                        //@ts-ignore
+                        const { data, error } = await sendEmail(formData);
+
+                        if (error) {
+                            toast.error(error);
+                            return;
+                        }
+                        else {
+                            toast.success("Email sent successfully!")
+                        }
+                    }
+                    } 
+                    className="mt-10 flex flex-col dark:text-black">
                         <input
                             placeholder="Your email"
                             type="email"
@@ -43,9 +57,7 @@ export default function Contact() {
                             required
                             maxLength={5000}
                             className="h-52 my-3 rounded-lg p-4 outline-none ring-1 ring-inset ring-gray-300 placeholder:ring-gray-400 focus:ring-[#1ad6aa] focus:shadow-[rgba(26,214,170,_0.4)_0px_2px_7px]" />
-                        <button type="submit" className="group flex gap-2 items-center justify-center h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none hover:scale-110 hover:bg-gray-950 active:scale-105 hover:shadow-xl transition-all">
-                            Submit <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1"></FaPaperPlane>
-                        </button>
+                            <SubmitButton />
                 </form>
         </motion.section>
     )

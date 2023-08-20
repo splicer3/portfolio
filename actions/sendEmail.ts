@@ -8,7 +8,7 @@ import React from "react";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-const sendEmail = async (formData: FormData) => {
+export const sendEmail = async (formData: FormData) => {
     const senderEmail = formData.get('senderEmail');
     const message = formData.get('message');
 
@@ -40,10 +40,10 @@ const sendEmail = async (formData: FormData) => {
                 })
         });
     } catch (error: unknown) {
-        return {error: getErrorMessage(error)};
+        return {
+            error: getErrorMessage(error)
+        };
     }
     
     return data;
 }
-
-export default sendEmail;
