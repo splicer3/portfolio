@@ -6,10 +6,12 @@ import { skillsData } from '@/lib/data'
 import { motion } from 'framer-motion'
 import { useSectionInView } from '@/hooks/useSectionInView'
 import { pillVariants } from '@/lib/variants'
+import { useTheme } from '@/context/ThemeContext'
 
 export default function Skills() {
     const constraintsRef = useRef<HTMLUListElement>(null);
     const { ref } = useSectionInView("Skills");
+    const theme = useTheme();
 
     return (
         <section ref={ref} id="skills" className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-0">
@@ -19,10 +21,8 @@ export default function Skills() {
                     skillsData.map((skill, i) => (
                         <motion.li 
                             key={i}
-                            className="bg-white borderBlack rounded-full px-5 py-3"
+                            className="bg-white dark:bg-gray-700 dark:text-gray-300 borderBlack rounded-full px-5 py-3"
                             variants={pillVariants}
-                            initial="initial"
-                            whileInView="animate"
                             viewport={{
                                 once: true,
                             }}

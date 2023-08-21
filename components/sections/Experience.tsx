@@ -7,9 +7,11 @@ import "react-vertical-timeline-component/style.min.css"
 import SectionHeading from '../SectionHeading'
 import { useSectionInView } from '@/hooks/useSectionInView'
 import { experiencesData } from '@/lib/data'
+import { useTheme } from '@/context/ThemeContext'
 
 export default function Experience() {
-    const { ref } = useSectionInView("Skills");
+    const { ref } = useSectionInView("Experience", 0.5);
+    const { theme } = useTheme();
     
   return (
     <section ref={ref} id="experience" className="mb-28 sm:mb-34 scroll-mt-28">
@@ -20,7 +22,9 @@ export default function Experience() {
                     <React.Fragment key={i}>
                         <VerticalTimelineElement
                             contentStyle={{
-                                background: "#f3f4f6",
+                                background: theme === "light"
+                                ? "#f3f4f6"
+                                : "rgba(255, 255, 255, 0.05)",
                                 boxShadow: "none",
                                 border: "1px solid rgba(0, 0, 0, 0.05)",
                                 borderRadius: "20px",
@@ -28,13 +32,17 @@ export default function Experience() {
                                 padding: "1.3rem 2rem"
                             }}
                             contentArrowStyle={{
-                                borderRight: "0.4rem solid #d1d5db",
+                                borderRight: theme === "light"
+                                ? "0.4rem solid #9ca3af"
+                                : "0.4rem solid rgba(255, 255, 255, 0.5)",
                             }}
                             date={experience.date}
                             dateClassName="mx-2"
                             icon={experience.icon}
                             iconStyle={{
-                                background: "white",
+                                background: theme === "light"
+                                ? "white"
+                                : "rgb(38,38,38)",
                                 fontSize: "1.5rem"
                             }}
                         >
@@ -44,7 +52,7 @@ export default function Experience() {
                             <p className="font-normal mt-0">
                                 {experience.location}
                             </p>
-                            <p className='!mt-1 !font-normal text-gray-700'>
+                            <p className='!mt-1 !font-normal text-gray-700 dark:text-white/75'>
                                 {experience.description}
                             </p>
                         </VerticalTimelineElement>

@@ -88,7 +88,7 @@ export default function Intro() {
                             Contact me <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition"/>
                     </Link>
                     <a
-                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline:none borderBlack hover:scale-110 hover:bg-gray-50 active:scale-105 hover:shadow-xl cursor-pointer transition"
+                        className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline:none borderBlack hover:scale-110 hover:bg-gray-50 active:scale-105 hover:shadow-xl cursor-pointer dark:bg-white/10 transition"
                         href='/CV.pdf'
                         download
                     >
@@ -99,7 +99,7 @@ export default function Intro() {
                             <a
                                 key={social.site}
                                 href={social.href}
-                                className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full borderBlack hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer transition"
+                                className="bg-white p-4 text-gray- hover:text-gray-950 flex items-center gap-2 rounded-full borderBlack hover:scale-[1.15] hover:bg-gray-50 active:scale-105 hover:shadow-md cursor-pointer dark:bg-white/10 dark:text-white/60 dark:hover:text-white/80 transition"
                                 target="_blank"
                             >
                                 {social.icon}

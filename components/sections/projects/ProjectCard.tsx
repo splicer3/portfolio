@@ -43,7 +43,7 @@ const ProjectCard = ({
             scale: scaleProgress,
             opacity: opacityProgress,
         }}
-            className="group bg-gray-100 hover:bg-gray-200 transition-colors max-w-[42rem] sm:h-[20rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 mb-3 sm:mb-8 last:mb-0 relative sm:even:pl-8"
+            className="group bg-gray-100 hover:bg-gray-200 dark:text-white dark:bg-white/10 dark:hover:bg-white/20  transition-colors max-w-[42rem] sm:h-[20rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 mb-3 sm:mb-8 last:mb-0 relative sm:even:pl-8"
             ref={ref}
             onClick={handleClick}
         >

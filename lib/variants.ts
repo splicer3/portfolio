@@ -12,16 +12,16 @@ export const pillVariants = {
     }),
     whileDrag: {
         scale: 1.10,
-        backgroundColor: "#37edcf",
+        filter: "brightness(80%)",
         cursor: "grabbing"
     },
     whileTap: {
         scale: 1.10,
-        backgroundColor: "#37edcf",
+        filter:"brightness(80%)",
         cursor: "grabbing"
     },
     whileHover: {
-        backgroundColor: "#f3f4f6",
+        filter: "brightness(80%)",
         cursor: "grab"
     }
 }
