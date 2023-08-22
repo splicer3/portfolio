@@ -9,3 +9,7 @@ html {
 .borderBlack {
     @apply border border-black/10
 }
+
+.webkitFix {
+    transform: translate3d(0, 0, 0);
+}
