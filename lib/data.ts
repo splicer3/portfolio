@@ -5,6 +5,7 @@ import { LuGraduationCap } from "react-icons/lu";
 import splicedImg from "@/public/spliced.png";
 import splicifyImg from "@/public/splicify.png";
 import objdetectorImg from "@/public/objdetector.png";
+import poketeamsImg from "@/public/poketeams.png";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const links = [
@@ -54,6 +55,14 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "PokeTeams",
+    description:
+      "A beatiful and feature-rich teambuilder and analyzer for Pokemon games and Showdown.",
+    tags: ["React", "Typescript", "Next.js", "Tailwind", "Framer Motion", "Supabase", "PokeAPI"],
+    imageUrl: poketeamsImg,
+    url: "https://poketeams.matteodiiorio.dev/"
+  },
   {
     title: "Spliced",
     description:
