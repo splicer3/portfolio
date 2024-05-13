@@ -1,13 +1,11 @@
 "use client";
 
 import { useTheme } from "@/context/ThemeContext";
-import { useRouter } from "next/navigation";
 import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
 
 export default function ThemeToggle() {
   const { theme, toggleTheme } = useTheme();
-  const router = useRouter();
 
   return (
     <button
