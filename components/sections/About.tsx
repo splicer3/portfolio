@@ -34,8 +34,7 @@ export default function About() {
                 When I&apos;m not immersed in lines of code, I find joy in a range of activities that offer a <span className="font-bold">balanced and fulfilling life</span>.{" "}
                 <span className="font-bold">Video games</span> <span className="italic">serve as a creative outlet and a source of relaxation</span>, allowing me to explore virtual worlds and immerse myself in captivating narratives. 
                 My passion for <span className="font-bold">motorsports and cars</span> is well reflected in my <span className="font-bold">work etiquette</span>: <span className="italic">software and hardware alike should be made like the finest of machines, with impeccable engineering</span>. 
-                Additionally, my flair for crafting <span className="font-bold">delightful cocktails</span> <span className="italic">lets me experiment with flavors and presentation</span>, bringing a touch of <span className="font-bold">artistry</span> to the mix. 
-                Beyond the digital realm, I embrace the thrill of <span className="font-bold">mountain biking</span>, <span className="italic"> where the synergy of nature and physical exertion invigorate my spirit</span>. 
+                Additionally, my flair for crafting <span className="font-bold">delightful cocktails</span> <span className="italic">lets me experiment with flavors and presentation</span>, bringing a touch of <span className="font-bold">artistry</span> to the mix.  
                 This diverse blend of interests fuels my <span className="font-bold">creativity, resilience, and determination</span> in both the technical and personal spheres of life.
             </p>
     </motion.section>
