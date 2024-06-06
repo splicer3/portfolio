@@ -106,6 +106,8 @@ export const skillsData = [
   "Flask",
   "OpenCV",
   "C",
+  "C++",
+  "Embedded Software",
   "Java",
   "Stripe",
   "Supabase"
