@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact, FaUniversity } from "react-icons/fa";
+import { FaCar, FaReact, FaUniversity } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import splicedImg from "@/public/spliced.png";
 import splicifyImg from "@/public/splicify.png";
@@ -42,15 +42,23 @@ export const experiencesData = [
     description:
       "Graduated with a score of 95/100. Learned coding basics both at school and on my own.",
     icon: React.createElement(LuGraduationCap),
-    date: "2022",
+    date: "June 2022",
   },
   {
     title: "Computer Engineering Student",
     location: "Bologna, BO",
     description:
-      "Enrolled in Computer Engineering at Alma Mater Studiorum - Università di Bologna and looking for internships.",
+      "Enrolled in Computer Engineering at Alma Mater Studiorum - Università di Bologna.",
     icon: React.createElement(FaUniversity),
-    date: "2022 - present",
+    date: "September 2022 - present",
+  },
+  {
+    title: "FSAE UniBo Motorsport HY Team Member",
+    location: "Bologna, BO",
+    description:
+      "Hybrid Vehicle Electronics and E-Powertrain Department Member, with a focus on Battery Management Systems and CAN communication.",
+    icon: React.createElement(FaCar),
+    date: "March 2024 - present"
   },
 ] as const;
 
