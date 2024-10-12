@@ -1,7 +1,7 @@
 "use client"
 
-import React, { forwardRef, useEffect, useRef } from 'react'
-import Image, { ImageProps } from 'next/image'
+import React, { useRef } from 'react'
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { BsArrowRight } from 'react-icons/bs'

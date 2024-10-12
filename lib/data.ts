@@ -1,11 +1,11 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaCar, FaReact, FaUniversity } from "react-icons/fa";
+import { FaCar, FaUniversity, FaUserTie } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import splicedImg from "@/public/spliced.png";
 import splicifyImg from "@/public/splicify.png";
 import objdetectorImg from "@/public/objdetector.png";
 import poketeamsImg from "@/public/poketeams.png";
+import gt7Img from "@/public/gt7.png";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 
 export const links = [
@@ -56,13 +56,28 @@ export const experiencesData = [
     title: "FSAE UniBo Motorsport HY Team Member",
     location: "Bologna, BO",
     description:
-      "Hybrid Vehicle Electronics and E-Powertrain Department Member, with a focus on Battery Management Systems and CAN communication.",
+      "Hybrid Vehicle Electronics and E-Powertrain Department Member, with a focus on Battery Management Systems, CAN communication, Live Telemetry and ECU Code",
     icon: React.createElement(FaCar),
     date: "March 2024 - present"
   },
+  {
+    title: "FSAE UniBo Motorsport HY - Electronics Division Manager",
+    location: "Bologna, BO",
+    description: 
+      "Electronics Division Manager for the Hybrid Vehicle, coordinating division members with GANTT charts, kanban-style boards and task management tools. \n Also managing the 2024/2025 electronic projects for the new Hybrid Vehicle.",
+    icon: React.createElement(FaUserTie),
+    date: "September 2024 - present"
+  }
 ] as const;
 
 export const projectsData = [
+  {
+    title: "GT7 Grafana Telemetry",
+    description: "A Grafana data source plugin for Gran Turismo 7 telemetry visualisation. Comes with an easy-to-deploy Docker Compose configuration.",
+    tags: ["Grafana", "Go", "React", "Docker"],
+    imageUrl: gt7Img,
+    url: "https://github.com/splicer3/grafana-gt7"
+  },
   {
     title: "PokeTeams",
     description:
@@ -105,6 +120,7 @@ export const skillsData = [
   "React",
   "Next.js",
   "Framer Motion",
+  "Grafana",
   "Node.js",
   "Git",
   "Tailwind",
@@ -113,6 +129,7 @@ export const skillsData = [
   "Python",
   "Flask",
   "OpenCV",
+  "Go",
   "C",
   "C++",
   "Embedded Software",
