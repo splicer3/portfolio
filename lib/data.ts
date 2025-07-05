@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCar, FaUniversity, FaUserTie } from "react-icons/fa";
+import { FaCar, FaDev, FaReact, FaUniversity, FaUserTie } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import splicedImg from "@/public/spliced.png";
 import splicifyImg from "@/public/splicify.png";
@@ -53,6 +53,14 @@ export const experiencesData = [
     date: "September 2022 - present",
   },
   {
+    title: "Mobile and Full-Stack Software Engineer Intern at LYBRA Inc.",
+    location: "Remote",
+    icon: React.createElement(FaReact),
+    description:
+      "Worked as a Mobile and Full-Stack Software Engineer Intern at LYBRA Inc., focusing on React Native and Next.js development.",
+    date: "October 2023 - July 2024"
+  },
+  {
     title: "FSAE UniBo Motorsport HY Team Member",
     location: "Bologna, BO",
     description:
@@ -64,9 +72,9 @@ export const experiencesData = [
     title: "FSAE UniBo Motorsport HY - Electronics Division Manager",
     location: "Bologna, BO",
     description: 
-      "Electronics Division Manager for the Hybrid Vehicle, coordinating division members with GANTT charts, kanban-style boards and task management tools. \n Also managing the 2024/2025 electronic projects for the new Hybrid Vehicle.",
+      "Electronics Division Manager for the Hybrid Vehicle. Coordinated division members using Agile workflows. \n Also managed the 2024/2025 electronic projects for the new Hybrid Vehicle.",
     icon: React.createElement(FaUserTie),
-    date: "September 2024 - present"
+    date: "September 2024 - June 2024"
   }
 ] as const;
 
@@ -125,6 +133,9 @@ export const skillsData = [
   "Git",
   "Tailwind",
   "Prisma",
+  "MATLAB",
+  "Simulink",
+  "Docker",
   "MongoDB",
   "Python",
   "Flask",
@@ -135,7 +146,7 @@ export const skillsData = [
   "Embedded Software",
   "Java",
   "Stripe",
-  "Supabase"
+  "Supabase",
 ] as const;
 
 export const linksData = [

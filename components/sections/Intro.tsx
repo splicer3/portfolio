@@ -65,8 +65,8 @@ export default function Intro() {
                     <span className="font-bold">Hi, I&apos;m Matteo.</span> I&apos;m a{" "}
                     <span className="font-bold">student</span> in{" "}
                     <span className="font-bold">Computer Engineering</span> at <span className="italic">University of Bologna</span>{" "}
-                    and an <span className="font-bold">Embedded Software Engineer</span> and <span className="font-bold">Full Stack Developer</span>. My focus is{" "}
-                    <span className="underline">Embedded Software, React (Next.js) and Python</span>.
+                with experience in <span className="font-bold"> Software Engineering</span>, from 
+                    <span className="underline"> Embedded Systems</span> to <span className="underline">Full-Stack Development</span>.
             </motion.h1>
             <motion.div 
                 className="flex flex-col sm:flex-row items-center justify-center gap-4 px-4 text-lg font-medium"
